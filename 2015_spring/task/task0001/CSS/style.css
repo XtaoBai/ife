@@ -292,7 +292,7 @@ menu > div{
 }
 
 .bottom .menu{
-    border: 1px solid white;
+    border-bottom: 1px solid white;
     margin: 0 auto;
     width: 100%;
     height: 30px;
@@ -416,8 +416,9 @@ CSS 的字重分 100 – 900 共九档，但目前受字体本身质量和浏览
 .wrap{
     /*这个地方一定需要重构*/
     position: relative;
-    display: grid;
-    grid-template-columns: 800px 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     width: 980px;
     margin-top: 10px;
     left: 10%;
@@ -426,9 +427,10 @@ CSS 的字重分 100 – 900 共九档，但目前受字体本身质量和浏览
 .section {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     width: 780px;
+
     margin-bottom: 8px;
-    
     padding: 0 5px;
     
     font-family: Arial, Helvetica, sans-serif;
@@ -483,7 +485,6 @@ CSS 的字重分 100 – 900 共九档，但目前受字体本身质量和浏览
 }
 
 .artical-info {
-    display: table-cell;
     vertical-align: text-bottom;
     text-align: end;
     color: #666;
@@ -492,10 +493,21 @@ CSS 的字重分 100 – 900 共九档，但目前受字体本身质量和浏览
 
 .page{
     width: 800px;
+    height: 30px;
+    margin: 8px auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-content: center;
 }
+
+.page li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
 
 .page a{
     /* 有问题*/
@@ -513,9 +525,10 @@ CSS 的字重分 100 – 900 共九档，但目前受字体本身质量和浏览
 
 
 .search {
-    display: grid;
-    grid-template-columns: 120px 50px;
+    display: flex;
+    flex-direction: row;
     background-color: #fff;
+    border: 1px solid rgba(211, 211, 211, 1);
 }
 
 
@@ -530,7 +543,7 @@ CSS 的字重分 100 – 900 共九档，但目前受字体本身质量和浏览
 
 .search .btn {
     width: 40px;
-    height: 22px;
+    height: 34px;
     margin: 10px;
     margin-left: 0px;
     background-color: #ccc;
